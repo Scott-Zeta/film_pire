@@ -22,6 +22,9 @@ const NavBar = () => {
               <Menu />
             </IconButton>
           )}
+          <IconButton color="inherit" sx={{ ml: 1 }} onClick={() => {}}>
+            <Brightness7 />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </>
