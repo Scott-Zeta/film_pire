@@ -1,7 +1,7 @@
 import React from 'react';
 import { CssBaseline } from '@mui/material';
 import { Route, Switch } from 'react-router-dom';
-import { Actors, Movies, MovieInfomation, NavBar, Profile } from './index';
+import { Actors, Movies, MovieInfomation, NavBar, Profile } from './ComponentsIndex';
 
 const App = () => (
   <div>
