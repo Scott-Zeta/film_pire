@@ -24,7 +24,7 @@ const NavBar = () => {
   const isMobile = useMediaQuery('(max-width:600px)');
   const theme = useTheme();
   // dummy variable for test
-  const isAuthenticated = false;
+  const isAuthenticated = true;
 
   return (
     <>
