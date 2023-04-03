@@ -69,6 +69,11 @@ const NavBar = () => {
           {isMobile && 'Search...'}
         </Toolbar>
       </AppBar>
+      <div>
+        <nav>
+          {isMobile ? (<Drawer>mobile</Drawer>) : (<Drawer>desktop</Drawer>)}
+        </nav>
+      </div>
     </>
   );
 };
