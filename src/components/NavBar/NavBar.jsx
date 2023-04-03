@@ -1,5 +1,5 @@
 /* eslint-disable react/button-has-type */
-import React from 'react';
+import React, { useState } from 'react';
 import {
   AppBar,
   IconButton,
@@ -20,6 +20,7 @@ import { useTheme } from '@mui/material/styles';
 import useStyles from './styles';
 
 const NavBar = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
   const classes = useStyles();
   const isMobile = useMediaQuery('(max-width:600px)');
   const theme = useTheme();
@@ -70,8 +71,18 @@ const NavBar = () => {
         </Toolbar>
       </AppBar>
       <div>
-        <nav>
-          {isMobile ? (<Drawer>mobile</Drawer>) : (<Drawer>desktop</Drawer>)}
+        <nav className={classes.drawer}>
+          {isMobile ? (
+            <Drawer
+              variant="temporary"
+              anchor="right"
+              open={mobileOpen}
+              className={classes.drawerBackground}
+              classes={{ paper: classes.drawerPaper }}
+              ModalProps={{ keepMounted: true }}
+            >mobile
+            </Drawer>
+          ) : (<Drawer>desktop</Drawer>)}
         </nav>
       </div>
     </>
