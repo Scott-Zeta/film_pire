@@ -3,10 +3,14 @@ import { Divider, List, ListItem, ListItemText, ListSubheader, ListItemIcon, Box
 import { Link } from 'react-router-dom';
 import { useTheme } from '@emotion/react';
 
-const Sidebar = () => (
-  <div>
-    Sidebar
-  </div>
-);
+const Sidebar = ({ setMobileOpen }) => {
+  const theme = useTheme();
+
+  return (
+    <div>
+      Sidebar
+    </div>
+  );
+};
 
 export default Sidebar;
