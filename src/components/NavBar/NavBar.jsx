@@ -78,12 +78,19 @@ const NavBar = () => {
               variant="temporary"
               anchor="right"
               open={mobileOpen}
-              className={classes.drawerBackground}
               classes={{ paper: classes.drawerPaper }}
               ModalProps={{ keepMounted: true }}
             ><Sidebar setMobileOpen={setMobileOpen} />
             </Drawer>
-          ) : (<Drawer>desktop</Drawer>)}
+          ) : (
+            <Drawer
+              classes={{ paper: classes.drawerPaper }}
+              variant="permanent"
+              open
+            >
+              <Sidebar setMobileOpen={setMobileOpen} />
+            </Drawer>
+          )}
         </nav>
       </div>
     </>
