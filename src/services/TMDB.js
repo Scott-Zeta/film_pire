@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-const tmbdApiKey = process.env.TMDB_KEY;
+const tmbdApiKey = process.env.REACT_APP_TMBD_KEY;
 const page = 1;
 
 export const tmbdApi = createApi({
@@ -14,3 +14,7 @@ export const tmbdApi = createApi({
     }),
   }),
 });
+
+export const {
+  useGetMoviesQuery,
+} = tmbdApi;
