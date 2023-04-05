@@ -4,11 +4,19 @@ import { Link } from 'react-router-dom';
 import { useTheme } from '@emotion/react';
 import useStyles from './styles';
 
+const redLogo = 'https://fontmeme.com/permalink/210930/8531c658a743debe1e1aa1a2fc82006e.png';
+const blueLogo = 'https://fontmeme.com/permalink/210930/6854ae5c7f76597cf8680e48a2c8a50a.png';
+
+const categories = [
+  { label: 'Popular', value: 'popular' },
+  { label: 'Top Rated', value: 'top_rated' },
+  { label: 'Upcoming', value: 'upcoming' },
+];
+const demoCategories = ['Comedy', 'Action', 'Horror', 'Animation'];
 const Sidebar = ({ setMobileOpen }) => {
   const theme = useTheme();
   const classes = useStyles();
-  const redLogo = 'https://fontmeme.com/permalink/210930/8531c658a743debe1e1aa1a2fc82006e.png';
-  const blueLogo = 'https://fontmeme.com/permalink/210930/6854ae5c7f76597cf8680e48a2c8a50a.png';
+
   return (
     <>
       <Link to="/" className={classes.imageLink}>
@@ -18,6 +26,10 @@ const Sidebar = ({ setMobileOpen }) => {
           alt="Filmpire log"
         />
       </Link>
+      <Divider />
+      <List>
+        <ListSubheader>categories</ListSubheader>
+      </List>
     </>
   );
 };
