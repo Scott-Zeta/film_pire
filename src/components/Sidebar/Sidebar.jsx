@@ -12,7 +12,11 @@ const categories = [
   { label: 'Top Rated', value: 'top_rated' },
   { label: 'Upcoming', value: 'upcoming' },
 ];
-const demoCategories = ['Comedy', 'Action', 'Horror', 'Animation'];
+const demoCategories = [
+  { label: 'Horror', value: 'horror' },
+  { label: 'Animation', value: 'animation' },
+  { label: 'Comedy', value: 'comedy' },
+];
 const Sidebar = ({ setMobileOpen }) => {
   const theme = useTheme();
   const classes = useStyles();
@@ -29,6 +33,14 @@ const Sidebar = ({ setMobileOpen }) => {
       <Divider />
       <List>
         <ListSubheader>categories</ListSubheader>
+        {demoCategories.map(({ label, value }) => (
+          <Link key={value} className={classes.links} to="/">
+            <ListItem onClick={() => {}}>
+              <ListItemIcon><img src={redLogo} className={classes.genreImages} height={30} /></ListItemIcon>
+              <ListItemText primary={label} />
+            </ListItem>
+          </Link>
+        ))}
       </List>
     </>
   );
