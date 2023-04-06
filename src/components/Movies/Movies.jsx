@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Box, CircularProgress, useMediaQuery, Typography } from '@mui/material';
 import { useSelector } from 'react-redux';
+import MovieList from '../MovieList/MoiveList';
 
 import { useGetMoviesQuery } from '../../services/TMDB';
 
@@ -9,7 +10,7 @@ const Movies = () => {
   console.log(data);
   return (
     <div>
-      Movies
+      <MovieList />
     </div>
   );
 };
