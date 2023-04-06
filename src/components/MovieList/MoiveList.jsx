@@ -1,7 +1,11 @@
 import React from 'react';
+import { Grid } from '@mui/material';
 
-const MoiveList = () => {
-  console.log('List');
+import useStyles from './styles';
+
+const MoiveList = ({ movies }) => {
+  const classes = useStyles();
+  console.log(movies);
   return (
     <div>
       MovieList
