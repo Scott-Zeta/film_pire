@@ -18,7 +18,7 @@ import {
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import useStyles from './styles';
-import Sidebar from '../Sidebar/Sidebar';
+import { Sidebar } from '../ComponentsIndex';
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
