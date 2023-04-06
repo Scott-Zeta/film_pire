@@ -7,9 +7,11 @@ const Movie = ({ movie }) => {
   const classes = useStyles();
   console.log(movie);
   return (
-    <div>
-      Movie
-    </div>
+    <Grid item xs={12} sm={6} md={3} lg={4} xl={2} className={classes.movie}>
+      <Typography className={classes.title} variant="h5">
+        {movie.title}
+      </Typography>
+    </Grid>
   );
 };
 
