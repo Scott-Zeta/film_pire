@@ -7,9 +7,11 @@ const MoiveList = ({ movies }) => {
   const classes = useStyles();
   console.log(movies);
   return (
-    <div>
-      MovieList
-    </div>
+    <Grid container className={classes.moviesContainer}>
+      {movies.result.map((movie, i) => (
+        <Movie key={i} movie={movie} />
+      ))}
+    </Grid>
   );
 };
 
