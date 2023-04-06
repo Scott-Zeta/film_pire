@@ -9,7 +9,7 @@ const MoiveList = ({ movies }) => {
   console.log(movies);
   return (
     <Grid container className={classes.moviesContainer}>
-      {movies.result.map((movie, i) => (
+      {movies.results.map((movie, i) => (
         <Movie key={i} movie={movie} />
       ))}
     </Grid>
