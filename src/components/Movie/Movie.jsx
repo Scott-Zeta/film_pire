@@ -3,13 +3,18 @@ import { Typography, Grid, Grow, Tooltip, Rating } from '@mui/material';
 import { Link } from 'react-router-dom';
 import useStyles from './styles';
 
-const Movie = ({ movie, i }) => {
+/* In React, the key prop is a reserved prop that is used to help React identify which items have changed,
+been added, or been removed in a list of components.
+It is not passed down to the component as a regular prop, so it will be undefined if you try to access it inside the component.
+*/
+
+const Movie = ({ movie, customKey }) => {
   const classes = useStyles();
-  console.log(movie);
+  console.log(customKey);
   return (
     <Grid item xs={12} sm={6} md={3} lg={4} xl={2} className={classes.movie}>
       {/* Grow is a loading animation component */}
-      <Grow in key={i} timeout={250}>
+      <Grow in key={customKey} timeout={(customKey + 1) * 100}>
         <Typography className={classes.title} variant="h5">
           {movie.title}
         </Typography>
