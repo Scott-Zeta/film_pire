@@ -4,16 +4,16 @@ export default makeStyles((theme) => ({
   movie: {
     padding: '10px',
   },
-  link: {
+  links: {
     alignItems: 'center',
     fontWeight: 'bolder',
+    textDecoration: 'none',
     [theme.breakpoints.up('xs')]: {
       display: 'flex',
       flexDirection: 'column',
     },
     '&:hover': {
       cursor: 'pointer',
-      textDecoration: 'none',
     },
   },
   image: {
