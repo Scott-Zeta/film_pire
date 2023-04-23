@@ -20,6 +20,13 @@ export default makeStyles((theme) => ({
     borderRadius: '20px',
     height: '300px',
     marginBottom: '10px',
+    '&:hover': {
+      transform: 'scale(1.1)',
+      transition: 'transform 0.5s ease-in-out',
+    },
+    '&:not(:hover)': {
+      transition: 'transform 0.3s ease-in-out',
+    },
   },
   title: {
     color: theme.palette.text.primary,
